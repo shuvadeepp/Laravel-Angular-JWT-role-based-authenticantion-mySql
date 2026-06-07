@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+
+        <div class="col-md-4">
+
+            <div class="card shadow border-0">
+                <div class="card-body p-4">
+
+                    <h2 class="text-center mb-4">
+                        Login
+                    </h2>
+
+                    <form (ngSubmit)="login()">
+
+                        <div class="mb-3">
+                            <label>Email</label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter email"
+                                name="vch_email"
+                                [(ngModel)]="formData.vch_email"
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Password</label>
+
+                            <input
+                                type="password"
+                                class="form-control"
+                                placeholder="Enter password"
+                                name="vch_password"
+                                [(ngModel)]="formData.vch_password"
+                            >
+                        </div>
+
+                        <button class="btn btn-success w-100">
+                            Login
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
