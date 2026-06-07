@@ -1,0 +1,57 @@
+CREATE TABLE tbl_users (
+    user_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+
+    vch_name VARCHAR(100),
+
+    vch_email VARCHAR(150) UNIQUE,
+
+    vch_password VARCHAR(255),
+
+    int_role SMALLINT NOT NULL DEFAULT 2,
+
+    is_active TINYINT DEFAULT 1,
+
+    created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+
+    updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE tbl_students (
+
+    student_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+
+    user_id BIGINT,
+
+    student_code VARCHAR(50),
+
+    department VARCHAR(100),
+
+    semester VARCHAR(20),
+
+    mobile VARCHAR(15),
+
+    address TEXT,
+
+    created_on DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE tbl_teachers (
+
+    teacher_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+
+    user_id BIGINT,
+
+    teacher_code VARCHAR(50),
+
+    department VARCHAR(100),
+
+    designation VARCHAR(100),
+
+    mobile VARCHAR(15),
+
+    address TEXT,
+
+    created_on DATETIME DEFAULT CURRENT_TIMESTAMP
+);
